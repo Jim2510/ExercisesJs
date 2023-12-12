@@ -12,8 +12,10 @@ calcola l'età media.
 
 
 function calculateAverageAge(persons) {
-    return persons.reduce((a, personAge)=> a + personAge.age, 0)
+    const range = persons.reduce((a, personAge)=> a + personAge.age, 0)
+    return range / persons.length
   }
+  
   
   const persons = [
     { name: 'Paul', age: 16 },
@@ -28,6 +30,6 @@ function calculateAverageAge(persons) {
     { name: 'Alice', age: 28 }
   ];
   
-  const average = calculateAverageAge(persons);
+  const average = calculateAverageAge(persons) 
   console.log(persons);
   console.log(average);
