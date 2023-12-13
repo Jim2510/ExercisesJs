@@ -20,10 +20,9 @@ function firstUncompletedNote(notes) {
   // annidati in 'todos' è vera e mette a paragone con la
   // callback usata su find restituendone il primo
   // valore che corrisponde ai criteri assegnati
-  // !note.todos = false 
   // quando todo.done sarà false, la condizione sarà vera è find
   // restituirà quell'elemento
-  
+
   // return notes.find(note => !note.todos.every(todo => todo.done));
 }
 
