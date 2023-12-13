@@ -12,6 +12,4 @@ a ciascun nome di frutta.
 */
 
 const fruits = ["Mela", "Banana", "Kiwi", "Fragola"];
-
-const fruits1 = fruits.forEach(fruit => console.log(fruit + '!')) // o console.log(`${fruit}!`)
-
+fruits.forEach(fruit => console.log(fruit + '!')) // o console.log(`${fruit}!`)
