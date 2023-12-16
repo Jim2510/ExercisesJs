@@ -8,12 +8,12 @@ function performOperation(a, b, callback) {
 
     // salvataggio della somma dei parametri in una variabile
   let result = a + b;
-  // chiamata della callback che passa come parametro il risultato
+    // chiamata della callback che pssa come parametro il risultato
   callback(result)
 }
 
 function displayResult(result) {
-    // funzione che stampa il risultato passata come callback
+    // funzione che stampa il risultato passata come callback alla funzione principale
   console.log(`La somma è: ${result}`)
 }
 
