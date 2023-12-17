@@ -8,7 +8,7 @@
 function fetchDataFromAPI(callback) {
     //! aggiunto messaggio di inizio elaborazione
     console.log('Estrazione dati in corso...')
-    setTimeout(function() {
+    setTimeout(() => {
         // dichiarazione dell'oggetto
       const obj = { name: "John", age: 30 };
       // chiamata della callback che passa come parametro l'oggetto
