@@ -39,7 +39,7 @@ function handleData(obj) {
 // a tutti gli effetti la promise
 
 fetchDataFromAPI(handleData).then((data) => {
-    data
+    return data
 }).catch((error) => {
     console.log(error)
 })

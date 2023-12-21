@@ -8,7 +8,7 @@
 function runCallbacks(callbacks) {
     // forEach che passa come parametri le funzioni dell'array
     callbacks.forEach(callback => {
-      callback()  
+        callback()
     });
 }
 
