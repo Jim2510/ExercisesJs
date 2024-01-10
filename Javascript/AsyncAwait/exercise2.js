@@ -40,5 +40,3 @@ const lanciaVeicoloSpaziale = async () => {
 
 // Chiamare la funzione per lanciare il veicolo spaziale
 lanciaVeicoloSpaziale();
-
-// ipmlementa la funzione asincrona "lanciaVeicoloSpaziale"

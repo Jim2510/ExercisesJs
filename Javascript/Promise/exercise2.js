@@ -14,11 +14,11 @@ let user1 = {
 // Prima funzione che genera una promise che risolve o genera l'errore passando,
 // una condizione
 
-function fetchUserData() {
+function fetchUserData(user) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (true === true) {
-                resolve(user1)
+                resolve(user)
             } else {
                 reject('User not found')
             }
@@ -47,7 +47,7 @@ function fetchUserPosts(user) {
 // .then che stamperà i post. Alla fine della concatenazione applichiamo un
 // .catch per mandare a schermo il primo eventuale errore che ci ritornerà
 
-fetchUserData()
+fetchUserData(user1)
     .then((user) => {
         console.log(`Username: ${user.name}`);
         return fetchUserPosts(user);
