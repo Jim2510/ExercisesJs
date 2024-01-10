@@ -39,3 +39,26 @@ class Automobile {
 
 const fiat = new Automobile("Fiat", 2000)
 console.log(fiat.dettagli())
+
+
+
+// Immagina di dover sviluppare un'applicazione di gestione di un negozio di libri.
+//  Puoi utilizzare le classi e l'ereditarietà per modellare diversi tipi di libri e gestire i dati relativi ai libri in modo più organizzato.
+
+//  1. Definisci una classe di base Libro con le seguenti proprietà:
+
+//  titolo
+//  autore
+//  annoPubblicazione
+//  prezzo
+//  2. Crea una classe derivata LibroFisico che erediti dalla classe Libro. Aggiungi una nuova proprietà:
+ 
+//  peso (rappresentato in grammi)
+// 3. Crea una classe derivata Ebook che erediti dalla classe Libro. Aggiungi una nuova proprietà:
+ 
+//  formato (ad esempio, PDF, ePub)
+//  4. Aggiungi metodi alle classi per ottenere informazioni dettagliate sui libri, come:
+ 
+//  getDettagliLibro() che restituisce una stringa con tutte le informazioni del libro.
+
+//  5. Crea alcune istanze di libri fisici ed ebook, e chiamali per ottenere i dettagli.
