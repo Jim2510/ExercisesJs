@@ -1,0 +1,18 @@
+:root {
+    --bg-color: #011212;
+    --standard-dim: 100px;
+    --circle-color: #ff8800;
+    --border: 50px
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.ball {
+    width: var(--standard-dim);
+    height: var(--standard-dim);
+    background-color: var(--circle-color);
+    border-radius: var(--border);
+}
+ 
