@@ -20,7 +20,7 @@ class Studente extends Persona {
 const persona = new Persona("Gianmarco", "Guglielmino", 29)
 const studente = new Studente("Felice", "Curcetti", 33, "Religione")
 console.log(studente)
-persona.saluta()
+persona.saluta 
 
 
 

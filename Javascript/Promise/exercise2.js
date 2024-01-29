@@ -33,7 +33,7 @@ function fetchUserData(user) {
 function fetchUserPosts(user) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (true === false) {
+            if (true === true) {
                 resolve(user.post)
             } else {
                 reject('Posts not found')
@@ -56,5 +56,5 @@ fetchUserData(user1)
         console.log(`Post dell'utente: ${post}`);
     })
     .catch((error) => {
-        console.error('Error:', error);
+        console.error('Error:', error.message);
     });
