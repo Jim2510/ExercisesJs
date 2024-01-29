@@ -12,6 +12,7 @@ a {
 
 em {
   color: darkred;
+  font-style: italic;
 }
 
 .variant-em {
@@ -45,5 +46,6 @@ ul li {
 }
 
 .content1 p {
-  border: 1px solid black
+  border: 1px solid black;
+  font-style: italic;
 }
