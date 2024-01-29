@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            background-color: #000;
+            width: 300px;
+            height: 300px;
+        }
+        .red {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        .blue {
+            background-color: inherit;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="mainTitle">Hello World</h1>
-    <button id="btn" onclick="changeTitle()">Cambia testo</button>
-    <script>
-        let button = document.getElementById('btn')
-        let title = document.querySelector('h1')
-        const changeTitle = ()=> {
-            title.innerText = "Ciao Mondo"
-        }
-    </script>
+    <div>
+        <div class="red">
+            <div class="blue">
+                <p>HELLO WORLD</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
