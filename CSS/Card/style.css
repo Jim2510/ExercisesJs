@@ -1,0 +1,76 @@
+
+/* Import del font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Visualizzazione del body */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Proprietà dell'elemento padre article che detterà
+la visualizzazione tramite l'uso della proprietà
+flex e definisce il font e il bordo */
+
+article {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Impostazione grandezza foto e il colore dello
+sfondo dell'immagine */
+
+article img {
+    background-color: gray;
+    width: 100%;
+    height: 200px;
+}
+
+/* Definizione del margine interno per staccare
+gli elementi dal bordo sinistro */
+
+article h3 {
+    padding-left: 10px;
+}
+
+article p {
+    padding-left: 10px;
+}
+
+article ul {
+    padding-left: 0;
+}
+
+/* Definizione degli stili per la visualizzazione
+della lista: rimossi dot, applicato un minimo di 
+padding e impostato il bordo degli elementi */
+
+article ul li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid rgb(152, 152, 152);
+}
+
+/* Viene preso il primo elemento li e viene applicato
+un bordo superiore per evidere sovrapposizioni */
+
+article ul li:first-of-type {
+    border-top: 1px solid gray;
+}
+
+
+
+.links {
+    padding: 5px;
+}
+
+.links a {
+    padding-left: 10px;
+}
