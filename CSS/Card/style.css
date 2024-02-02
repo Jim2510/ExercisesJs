@@ -16,7 +16,7 @@ la visualizzazione tramite l'uso della proprietà
 flex e definisce il font e il bordo */
 
 article {
-    width: 300px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     border: 1px solid gray;
