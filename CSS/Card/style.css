@@ -22,6 +22,7 @@ article {
     border: 1px solid gray;
     padding-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
 }
 
 /* Impostazione grandezza foto e il colore dello
