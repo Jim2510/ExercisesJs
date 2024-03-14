@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .theme {
+        background-color: black;
+        color: white;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Dark Mode</h1>
+    <div>
+      <button class="btn">Dark Mode</button>
+    </div>
+    <script> 
+        // soluzione 1
+        // funzione da applicare all'onclick=""
+
+        // const changeTheme = () => {
+        //     const body = document.querySelector("body");
+        //     body.classList.toggle("theme");
+        // }
+
+        // soluzione 2
+        // funzione che applica l'evento al pulsante btn 
+
+        const btn = document.querySelector(".btn");
+        
+        btn.addEventListener("click", () => {
+            const body = document.querySelector("body");
+            body.classList.toggle("theme")
+        })
+
+    </script>
+  </body>
+</html>

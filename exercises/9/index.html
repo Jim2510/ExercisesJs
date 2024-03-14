@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    ></meta>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+<ul></ul>
+
+    <script>
+        
+
+        document.querySelector("input").addEventListener("input", () => {
+            const lista = document.querySelector("ul")
+            lista.innerText = ""
+            const getFilm = async () => {
+                document.querySelector("ul")
+                const inputVal = document.querySelector("input").value
+                try {
+                     const response = await fetch(`http://www.omdbapi.com/?s=${inputVal}&apikey=8a9da3b7`);
+                    if(response.ok) {
+                        const data = await response.json();
+                        console.log(data);
+                        data.Search.forEach(film => {
+                            const li = document.createElement("li");
+                            li.innerText = film.Title;
+                            lista.appendChild(li)
+                    })
+                }else {
+                    throw new Error(response.statusText)
+                }
+                }catch(error) {
+                    console.error(error)
+                }
+            }
+             getFilm()
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Information</title>
+  </head>
+  <body>
+    <h1>Select a city:</h1>
+    <button data-key="rome">Rome</button>
+    <button data-key="london">London</button>
+    <button data-key="milan">Milan</button>
+    <!-- Aggiungi altri pulsanti per altre città -->
+
+    <script>
+      const citiesInfo = {
+        rome: {
+          name: "Rome",
+          population: "2.8 million",
+          country: "Italy",
+        },
+        london: {
+          name: "London",
+          population: "9 million",
+          country: "United Kingdom",
+        },
+        milan: {
+          name: "Milan",
+          population: "4 million",
+          country: "Italy",
+        },
+        // Aggiungi altre città con le relative informazioni
+      };
+
+      document.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+          const cityKey = event.target.dataset.key;
+          const cityInfo = citiesInfo[cityKey];
+
+          const containerCity = document.createElement("div");
+          containerCity.classList.add("containerCity");
+          document.querySelectorAll('.containerCity').forEach(el => el.remove());
+          const titleCity = document.createElement("h2");
+          const population = document.createElement("p");
+          const country = document.createElement("p");
+
+          if (cityInfo) {
+            titleCity.innerText = cityInfo.name;
+            population.innerText = cityInfo.population;
+            country.innerText = cityInfo.country;
+            containerCity.appendChild(titleCity);
+            containerCity.appendChild(population);
+            containerCity.appendChild(country);
+            document.body.appendChild(containerCity);
+
+            console.log(`Name: ${cityInfo.name}`);
+            console.log(`Population: ${cityInfo.population}`);
+            console.log(`Country: ${cityInfo.country}`);
+          } else {
+            console.error(`No information found for city with key ${cityKey}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
