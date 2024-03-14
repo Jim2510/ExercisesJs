@@ -34,3 +34,8 @@ export function UncontrolledForm() {
     </>
   );
 }
+
+// Vantaggi nell'utilizzo della FormData API:
+// Ci permette di avere accesso ai dati forniti dal modulo html anzicchè creare tutta la struttura per la gestione. Inoltre è abbastanza flessibile da consentire l'aggiunta o la rimozione di campi del modulo senza dover modificare il codice che recupera i dati
+// Svantaggi:
+// Siamo limitati alle informazioni inserite nell'input, dunque nel caso in cui ci siano informazioni provenienti da altre fonti, inoltre viene a mancare il sistema di validazione.
