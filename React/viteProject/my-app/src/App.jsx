@@ -12,6 +12,7 @@ import FocusableInput from "./FocusableInput";
 import { Mounted } from "./Mounted";
 import { MyList } from "./MyList";
 import { Colors } from "./Colors";
+import { TodoList } from "./TodoList";
 
 export function App() {
   const handleButtonClick = () => {
@@ -40,6 +41,7 @@ export function App() {
           { id: 4, name: "Green" },
         ]}
       />
+      <TodoList />
     </>
   );
 }
