@@ -11,14 +11,14 @@ export function TodoList() {
   }
 
   return (
-    <div>
-      <input type="text" ref={todoRef} />
-      <button onClick={handleAddTodo}>Add Todo</button>
+    <>
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>{todo}</li>
         ))}
       </ul>
-    </div>
+      <input type="text" ref={todoRef} />
+      <button onClick={handleAddTodo}>Add Todo</button>
+    </>
   );
 }
