@@ -13,6 +13,8 @@ export function MyForm() {
 
   const inputRef = useRef(null);
 
+  console.log(inputRef);
+
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
