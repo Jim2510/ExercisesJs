@@ -6,13 +6,11 @@ export function TodoList() {
 
   function handleAddTodo() {
     const newTodo = todoRef.current.value;
-    if (newTodo.trim() !== "") {
-      setTodos((prevTodos) => [...prevTodos, newTodo]);
-      todoRef.current.value = "";
-    }
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+    todoRef.current.value = "";
   }
 
-  // nella funzione viene controllato se l'indice i dell'elemento corrente è diverso dall'indice index che vogliamo rimuovere.
+  // nella funzione viene controllato se l'indice i dell'elemento corrente è diverso dall'indice index che voglio rimuovere.
   function handleRemove(index) {
     setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
   }
