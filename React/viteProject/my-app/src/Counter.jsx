@@ -4,20 +4,19 @@ import { Counterdisplay } from "./Counterdisplay";
 export function Counter({ initialValue = 0 }) {
   const [counter, setCounter] = useState(initialValue);
   const directionRef = useRef(null);
-  const prevDirectionRef = useRef(initialValue);
+  const prevDirectionRef = useRef(null);
 
   useEffect(() => {
-    if (counter > prevDirectionRef.current) {
+    if (counter > initialValue) {
       directionRef.current = "up";
     } else {
       directionRef.current = "down";
     }
-    if (directionRef.current === prevDirectionRef.current) {
-      prevDirectionRef.current = counter;
-    } else {
-      console.log("Direction:", directionRef.current);
+    if (directionRef.current !== prevDirectionRef.current) {
+      console.log(directionRef.current);
+      prevDirectionRef.current = directionRef.current;
     }
-  }, [counter]);
+  }, [counter, initialValue]);
 
   const handleCounterIncrement = () => {
     setCounter((c) => c + 1);

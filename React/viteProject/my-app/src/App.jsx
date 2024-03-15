@@ -22,6 +22,7 @@ export function App() {
 
   return (
     <>
+      <Welcome />
       <Counter />
       <Mounted />
       <MyList
