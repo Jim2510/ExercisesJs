@@ -10,7 +10,6 @@ export function TodoList() {
     todoRef.current.value = "";
   }
 
-  // nella funzione viene controllato se l'indice i dell'elemento corrente è diverso dall'indice index che voglio rimuovere.
   function handleRemove(index) {
     setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
   }
