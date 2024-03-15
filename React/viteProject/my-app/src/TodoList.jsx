@@ -6,10 +6,8 @@ export function TodoList() {
 
   function handleAddTodo() {
     const newTodo = todoRef.current.value;
-    if (newTodo.trim() !== "") {
-      setTodos((prevTodos) => [...prevTodos, newTodo]);
-      todoRef.current.value = "";
-    }
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+    todoRef.current.value = "";
   }
 
   return (
