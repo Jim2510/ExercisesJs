@@ -1,24 +1,39 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export function TodoList() {
-  const [todos, setTodos] = useState(["Prova1", "Prova2"]);
+  const [todos, setTodos] = useState([]);
   const todoRef = useRef(null);
 
   function handleAddTodo() {
     const newTodo = todoRef.current.value;
-    setTodos((prevTodos) => [...prevTodos, newTodo]);
-    todoRef.current.value = "";
+    if (newTodo.trim() !== "") {
+      setTodos((prevTodos) => [...prevTodos, newTodo]);
+      todoRef.current.value = "";
+    }
+  }
+
+  // nella funzione viene controllato se l'indice i dell'elemento corrente è diverso dall'indice index che vogliamo rimuovere.
+  function handleRemove(index) {
+    setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
+  }
+
+  function handleResetTodos() {
+    setTodos([]);
   }
 
   return (
-    <>
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
-        ))}
-      </ul>
+    <div>
       <input type="text" ref={todoRef} />
       <button onClick={handleAddTodo}>Add Todo</button>
-    </>
+      <button onClick={handleResetTodos}>Reset</button>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            {todo}
+            <button onClick={() => handleRemove(index)}>Remove</button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
