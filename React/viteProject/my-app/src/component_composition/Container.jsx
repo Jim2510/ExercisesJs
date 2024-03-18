@@ -9,7 +9,7 @@ export function Container({ title, children }) {
 
   return (
     <>
-      <div className="bg-red-500 border-2 border-red-800">
+      <div className="bg-red-500 border-2 border-red-800 p-3">
         <div className="flex justify-between items-center">
           {title}
           <button onClick={handleCollapse} className="p-2 bg-red-900">
