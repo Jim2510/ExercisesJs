@@ -33,9 +33,17 @@ export function Counter({ initialValue = 0 }) {
   return (
     <>
       <Counterdisplay counter={counter} />
-      <button onClick={handleCounterIncrement}>Increment</button>
-      <button onClick={handleCounterDecrement}>Decrement</button>
-      <button onClick={handleCounterReset}>Reset</button>
+      <div className="flex items-center justify-between">
+        <button className="p-2" onClick={handleCounterIncrement}>
+          +
+        </button>
+        <button className="p-2" onClick={handleCounterDecrement}>
+          -
+        </button>
+        <button className="p-2" onClick={handleCounterReset}>
+          Reset
+        </button>
+      </div>
     </>
   );
 }
