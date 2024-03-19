@@ -22,13 +22,13 @@ import { GitHubUser } from "./data_fetching/GitHubUser";
 export function App() {
   const [language, setLanguage] = useState("en");
 
-  function handleSetLanguage(language) {
-    setLanguage(language);
+  function handleSetLanguage(event) {
+    setLanguage(event.target.value);
   }
 
   return (
     <>
-      {/* <Container title="My Application">
+      <Container title="My Application">
         <Welcome name="User" />
         <Counter />
       </Container>
@@ -36,9 +36,11 @@ export function App() {
         <ClockContext />
       </LanguageContext.Provider>
 
-      <button onClick={() => handleSetLanguage("en")}>En</button>
-      <button onClick={() => handleSetLanguage("it")}>It</button> */}
-      <GitHubUser />
+      <select value={language} onChange={handleSetLanguage}>
+        <option value="en">English</option>
+        <option value="it">Italiano</option>
+      </select>
+      {/* <GitHubUser /> */}
     </>
   );
 }
