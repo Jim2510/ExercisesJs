@@ -18,17 +18,18 @@ import { useState } from "react";
 import { LanguageContext } from "../src/context/LanguageContext";
 import { ClockContext } from "./context/ClockContext";
 import { GitHubUser } from "./data_fetching/GitHubUser";
+import { GitHubUsers } from "./data_fetching/GitHubUsers";
 
 export function App() {
-  const [language, setLanguage] = useState("en");
+  // const [language, setLanguage] = useState("en");
 
-  function handleSetLanguage(event) {
-    setLanguage(event.target.value);
-  }
+  // function handleSetLanguage(event) {
+  //   setLanguage(event.target.value);
+  // }
 
   return (
     <>
-      <Container title="My Application">
+      {/* <Container title="My Application">
         <Welcome name="User" />
         <Counter />
       </Container>
@@ -39,8 +40,8 @@ export function App() {
       <select value={language} onChange={handleSetLanguage}>
         <option value="en">English</option>
         <option value="it">Italiano</option>
-      </select>
-      {/* <GitHubUser /> */}
+      </select> */}
+      <GitHubUsers />
     </>
   );
 }

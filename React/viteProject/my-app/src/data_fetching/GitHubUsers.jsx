@@ -23,7 +23,7 @@ export function GitHubUsers() {
       setLoading(false);
     }
   }
-  //
+
   async function handleSubmit(event) {
     event.preventDefault();
     await fetchUsername(user);
@@ -43,19 +43,26 @@ export function GitHubUsers() {
   return (
     <>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="p-3 border-black border-2 m-2">
           <input
             type="text"
             value={user}
             onChange={handleChange}
             placeholder="Enter GitHub username"
+            className="p-3 border"
           />
           <button type="submit">Search</button>
         </form>
         {loading && <p>Loading...</p>}
-        {list.map((userData) => (
-          <GitHubUser key={userData.id} username={userData.login} />
-        ))}
+        <ul>
+          {list.map((userData) => (
+            <GitHubUser
+              key={userData.id}
+              username={userData.login}
+              img={userData.avatar_url}
+            />
+          ))}
+        </ul>
       </div>
     </>
   );
