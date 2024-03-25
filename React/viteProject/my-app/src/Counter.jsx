@@ -23,7 +23,7 @@ export function Counter({ initialValue = 0 }) {
   };
 
   const handleCounterDecrement = () => {
-    setCounter(counter === initialValue ? initialValue : (c) => c - 1);
+    setCounter((c) => c - 1);
   };
 
   const handleCounterReset = () => {

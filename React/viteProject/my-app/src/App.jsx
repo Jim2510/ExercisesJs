@@ -19,8 +19,13 @@ import { LanguageContext } from "../src/context/LanguageContext";
 import { ClockContext } from "./context/ClockContext";
 import { GitHubUser } from "./data_fetching/GitHubUser";
 import { GitHubUsers } from "./data_fetching/GitHubUsers";
+import { CounterHooks } from "./custom_hooks/CounterHooks";
+import { Guser } from "./custom_hooks/use_github/Guser";
+import { Form } from "./custom_hooks/Form";
+import { ShowLocation } from "./custom_hooks/use_current_location/ShowLocation";
 
 export function App() {
+  const [username, setUsername] = useState("");
   // const [language, setLanguage] = useState("en");
 
   // function handleSetLanguage(event) {
@@ -41,7 +46,16 @@ export function App() {
         <option value="en">English</option>
         <option value="it">Italiano</option>
       </select> */}
-      <GitHubUsers />
+      {/* <Counter /> */}
+      {/* <CounterHooks /> */}
+      <input
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <Guser username={username} />
+      <Form />
+      <ShowLocation />
     </>
   );
 }
