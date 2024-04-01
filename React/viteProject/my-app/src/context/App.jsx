@@ -25,19 +25,9 @@ import { Form } from "./custom_hooks/Form";
 import { ShowLocation } from "./custom_hooks/use_current_location/ShowLocation";
 
 export function App() {
-  const [username, setUsername] = useState("");
-  // const [language, setLanguage] = useState("en");
-
-  // function handleSetLanguage(event) {
-  //   setLanguage(event.target.value);
-  // }
 
   return (
     <>
-      <Container title="My Application">
-        <Welcome name="User" />
-        <Counter />
-      </Container>
       <LanguageContext.Provider value={language}>
         <ClockContext />
       </LanguageContext.Provider>

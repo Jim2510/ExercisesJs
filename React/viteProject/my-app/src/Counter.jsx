@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Counterdisplay } from "./Counterdisplay";
+import { Link } from "react-router-dom";
 
 export function Counter({ initialValue = 0 }) {
   const [counter, setCounter] = useState(initialValue);

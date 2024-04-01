@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const createForm = () => {
   return {
@@ -75,6 +76,7 @@ export function Login({ onLogin }) {
         >
           Reset
         </button>
+        <Link to="/welcome">Back to homepage</Link>
       </form>
     </>
   );
