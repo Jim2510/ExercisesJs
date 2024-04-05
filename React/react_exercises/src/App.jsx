@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { GitHubUserList } from "./react_router/GitHubUserList";
-import { ShowGitHubUser } from "./react_router/ShowGitHubUser";
+import { ShowGitHubUser } from "./react_router/router_one/ShowGitHubUser";
 
 export function App() {
   return (
