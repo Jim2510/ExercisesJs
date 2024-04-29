@@ -5,10 +5,14 @@ const server = createServer((request, response) => {
 
   response.statusCode = 200;
 
-  response.setHeader("Content-Type", "text/html");
+  response.setHeader("Content-Type", "application/JSON");
 
   response.end(
-    "<html><body><h1>Questa pagina è servita con Node.js</h1></body></html>"
+    JSON.stringify({
+      name: "Gianmarco,",
+      surname: "Guglielmino",
+      career: "jr full stack",
+    })
   );
 });
 
