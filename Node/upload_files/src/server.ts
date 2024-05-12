@@ -37,6 +37,8 @@ app.put("/api/planets/:id", updateById);
 
 app.delete("/api/planets/:id", deleteById);
 
+app.post("/api/planets/:id/image", upload.single("image"), createImage);
+
 app.listen(process.env.PORT, () => {
   console.log("Listening on port 3000");
 });
