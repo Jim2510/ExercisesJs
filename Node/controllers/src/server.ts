@@ -10,7 +10,6 @@ import {
 } from "./controllers/planets.js";
 
 const app = express();
-const port = 3000;
 
 app.use(morgan("dev"));
 app.use(express.json());
@@ -25,6 +24,6 @@ app.put("/api/planets/:id", updateById);
 
 app.delete("/api/planets/:id", deleteById);
 
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
   console.log("Listening on port 3000");
 });

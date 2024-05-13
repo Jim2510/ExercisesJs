@@ -16,8 +16,10 @@ function luckyDraw(player) {
 
 luckyDraw("Joe")
   .then((result) => console.log(result))
+  .catch((error) => console.log(error.message))
   .then(() => luckyDraw("Caroline"))
   .then((result) => console.log(result))
+  .catch((error) => console.log(error.message))
   .then(() => luckyDraw("Sabrina"))
   .then((result) => console.log(result))
   .catch((error) => console.error(error.message));
