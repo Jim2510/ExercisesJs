@@ -1,5 +1,3 @@
-const { resolve } = require("path");
-
 function luckyDraw(player) {
   return new Promise((resolve, reject) => {
     const win = Boolean(Math.round(Math.random()));
